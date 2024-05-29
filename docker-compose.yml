@@ -1,0 +1,10 @@
+services:
+  go-text2speech:
+    build: 
+      context: .
+      dockerfile: ./build/Dockerfile
+    tty: true
+    env_file:
+      - ./build/.go_env
+    volumes:
+      - ./data:/app/data
